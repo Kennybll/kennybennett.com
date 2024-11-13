@@ -4,7 +4,7 @@ import { IconAward, IconSchool } from "@tabler/icons-react";
 const education = [
   {
     school: "Davenport University",
-    degree: "Bachelor of Science of Computer Science",
+    degree: "Bachelor of Science in Computer Science",
   },
 ];
 
