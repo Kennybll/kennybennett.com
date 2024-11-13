@@ -5,7 +5,7 @@ import "./globals.css";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kenny Bennett",
+  title: "Kenny Bennett - Full Stack Developer ",
   description: "Full Stack Developer | React | TypeScript | Go | AWS",
 };
 
