@@ -33,7 +33,11 @@ export const Contact = () => (
     <div className="space-y-2 flex-[3]">
       <h1 className="font-bold text-3xl">Kenny Bennett</h1>
       <p className="italic">
-        Full Stack Developer | React | TypeScript | Go | AWS
+        Full Stack Developer with 5 years of experience in web and mobile
+        development using React, TypeScript, and AWS. Proven track record of
+        delivering high-performance solutions, managing projects from concept to
+        production, and leading development teams. Seeking a challenging role to
+        leverage my skills to create innovative and impactful products.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {links.map((link) => {
