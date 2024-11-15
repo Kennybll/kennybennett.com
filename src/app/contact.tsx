@@ -1,15 +1,16 @@
 import {
   IconBrandGithub,
   IconBrandLinkedin,
+  IconFileTypePdf,
   IconMapPin,
-  IconWorld,
 } from "@tabler/icons-react";
 
 const links = [
   {
-    label: "kennybennett.com",
-    url: "https://kennybennett.com",
-    icon: <IconWorld size={24} className="mr-2" />,
+    label: "PDF Version",
+    url: "/Kenneth Bennett Resume Web.pdf",
+    icon: <IconFileTypePdf size={24} className="mr-2" />,
+    download: true,
   },
   {
     label: "in/kennybll",
@@ -49,10 +50,11 @@ export const Contact = () => (
             <div className="flex items-center" key={link.label}>
               {link.icon}
               <a
-                className="underline "
+                className="underline"
                 href={link.url}
                 target="_blank"
                 rel="noreferrer"
+                download={link?.download ?? false}
               >
                 {link.label}
               </a>
