@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { IconBuildingEstate, IconCalendar } from "@tabler/icons-react";
+import { IconBuildingEstate, IconCalendar, IconMap } from "@tabler/icons-react";
 import { Badge } from "@/components/ui/badge";
 
 type Experience = {
@@ -7,6 +7,7 @@ type Experience = {
   company: string;
   startDate: string;
   endDate: string;
+  location: string;
   description: string[];
   technologies: string[];
 };
@@ -17,6 +18,7 @@ const experiences: Array<Experience> = [
     company: "F & B Wholesale",
     startDate: "05/2022",
     endDate: "Present",
+    location: "Bronson, MI (Remote)",
     description: [
       "Developed and deployed a real time auction website using React and TypeScript with millions in sales, 10k+ users, and over 1250 daily active users",
       "Integrated real-time data updates using WebSockets and React Query, enabling users to view live auction bids without refreshing the page",
@@ -54,6 +56,7 @@ const experiences: Array<Experience> = [
     company: "Instra.AI",
     startDate: "05/2021",
     endDate: "09/2022",
+    location: "Chicago, IL (Remote)",
     description: [
       "Developed a HIPAA-compliant healthcare CMS using React, Next.js, Prisma, Next Auth, and TypeScript",
       "Built a robust appointment scheduling system, including a calendar view for tracking doctor availability and scheduled appointments",
@@ -94,6 +97,7 @@ const experiences: Array<Experience> = [
     company: "Whaleshares",
     startDate: "10/2018",
     endDate: "09/2019",
+    location: "Remote",
     description: [
       "Implemented features for friends and communities, boosting user engagement by 20%",
       "Developed and optimized search functionality, enabling users to efficiently find their friends, posts they like, and other relevant content, enhancing overall user engagement and satisfaction",
@@ -125,6 +129,10 @@ export const Experiences = () => (
           <div className="flex items-center">
             <IconCalendar size={24} className="mr-2" />
             {experience.startDate} - {experience.endDate}
+          </div>
+          <div className="flex items-center">
+            <IconMap size={24} className="mr-2" />
+            {experience.location}
           </div>
           <ul>
             {experience.description.map((desc) => (
