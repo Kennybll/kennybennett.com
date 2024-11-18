@@ -1,9 +1,10 @@
 import { Separator } from "@/components/ui/separator";
-import { IconAward, IconSchool } from "@tabler/icons-react";
+import { IconAward, IconMap, IconSchool } from "@tabler/icons-react";
 
 const education = [
   {
     school: "Davenport University",
+    location: "Grand Rapids, MI",
     degree: "Bachelor of Science in Computer Science",
   },
 ];
@@ -18,6 +19,10 @@ export const Education = () => (
           <div className="flex items-center">
             <IconSchool size={24} className="mr-2" />
             <span>{item.school}</span>
+          </div>
+          <div className="flex items-center">
+            <IconMap size={24} className="mr-2" />
+            <span>{item.location}</span>
           </div>
           <div className="flex items-center">
             <IconAward size={24} className="mr-2" />

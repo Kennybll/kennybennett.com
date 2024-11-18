@@ -1,6 +1,5 @@
 import { Separator } from "@/components/ui/separator";
 import { IconBuildingEstate, IconCalendar, IconMap } from "@tabler/icons-react";
-import { Badge } from "@/components/ui/badge";
 
 type Experience = {
   title: string;
@@ -20,15 +19,11 @@ const experiences: Array<Experience> = [
     endDate: "Present",
     location: "Bronson, MI (Remote)",
     description: [
-      "Developed and deployed a real time auction website using React and TypeScript with millions in sales, 10k+ users, and over 1250 daily active users",
-      "Integrated real-time data updates using WebSockets and React Query, enabling users to view live auction bids without refreshing the page",
-      "Built scalable backend services using Golang and Node.js/TypeScript/Express, improving system performance and reducing API response times by 20%",
-      "Enforced strict type checking in the build process using TypeScript and ESLint, ensuring zero type-related errors in production and improving code quality",
+      "Developed and deployed a real time auction website with millions in sales, 10k+ users, and over 1250 daily active users",
+      "Integrated real-time data updates using WebSockets, enabling users to view live auction bids without refreshing the page",
+      "Built scalable backend services improving system performance and reducing API response times by 20%",
       "Integrated Square as a payment processor with batch payments which reduced payment fees by 50%",
-      "Implemented in-app, email, and text notifications using AWS SES and SNS that increased user engagement by 25%",
-      "Monitored and optimized app performance and infrastructure using Datadog and Sentry, integrating error tracking and logs for quicker resolution of production issues",
-      "Built the infrastructure for production, staging, and development environments on AWS and Cloudflare using Docker and Kubernetes",
-      "Leveraged Doppler to securely manage and automate the storage of API keys, environment variables, and secrets, ensuring seamless integration across development, staging, and production environments",
+      "Implemented in-app, email, and text notifications that increased user engagement by 25%",
     ],
     technologies: [
       "React",
@@ -58,18 +53,12 @@ const experiences: Array<Experience> = [
     endDate: "09/2022",
     location: "Chicago, IL (Remote)",
     description: [
-      "Developed a HIPAA-compliant healthcare CMS using React, Next.js, Prisma, Next Auth, and TypeScript",
-      "Built a robust appointment scheduling system, including a calendar view for tracking doctor availability and scheduled appointments",
-      "Wrote and maintained unit tests using Jest to ensure application reliability and catch potential issues",
-      "Enhanced security by deploying the CMS on AWS with BAA compliance, ensuring 100% adherence to HIPAA standards",
-      "Setup authentication and authorization in React Native using AWS Cognito",
       "Created a workflow where photos taken in React Native were uploaded to AWS S3 and using AWS Lambda analyzed the images and extracted data on items presence and coordinates",
-      "Integrated a feedback mechanism in the app allowing users to report false positives, negatives, or missing items, using this data to progressively train and improve the AI model",
-      "Compiled and built the mobile app using React Native and Xcode, set up App Store credentials for deployment, and managed beta releases on TestFlight, enabling user testing and gathering feedback",
+      "Integrated a feedback mechanism in the app allowing users to report false positives, negatives, or missing items, using this data to progressively train and improve the AI model using supervised learning",
+      "Built an appointment scheduling system, including a calendar view for tracking doctor availability and scheduled appointments",
       "Mentored 5 web developer interns in gaining experience and improving their skills in React, TypeScript, and modern development practices, leading to their successful contributions to production projects",
       "Led sprint planning and execution, assigning tasks to team members, tracking progress, and facilitating sprint retrospectives to continuously improve team performance and project outcomes",
-      "Collaborated with management to understand business requirements, translating them into actionable tasks and detailed project plans for the development team",
-      "Developed and maintained Terraform modules to standardize infrastructure deployment, including VPCs, EC2 instances, RDS databases, and S3 buckets, ensuring repeatability and reducing setup time",
+      "Developed and maintained Terraform modules to standardize infrastructure deployment, ensuring repeatability and reducing setup time",
     ],
     technologies: [
       "React",
@@ -99,8 +88,10 @@ const experiences: Array<Experience> = [
     endDate: "09/2019",
     location: "Remote",
     description: [
-      "Implemented features for friends and communities, boosting user engagement by 20%",
-      "Developed and optimized search functionality, enabling users to efficiently find their friends, posts they like, and other relevant content, enhancing overall user engagement and satisfaction",
+      "Implemented adding, finding, and removing friends, which increased social interaction",
+      "Built comprehensive community functionalities, such as creating communities, joining them, and displaying posts based on user memberships, driving a 20% boost in user engagement",
+      "Developed and optimized search functionality, enabling users to find their friends, posts they like, and other relevant content, enhancing overall user satisfaction",
+      "Created the front-end functionality for cryptocurrency transfers, enabling users to directly send earnings from social media posts to other users on the platform",
     ],
     technologies: [
       "React",
@@ -139,14 +130,6 @@ export const Experiences = () => (
               <li className="list-disc list-inside" key={desc}>
                 {desc}
               </li>
-            ))}
-          </ul>
-          <p className="font-bold">Technologies used:</p>
-          <ul className="flex flex-wrap gap-1">
-            {experience.technologies.map((tech) => (
-              <Badge variant={"secondary"} key={tech}>
-                {tech}
-              </Badge>
             ))}
           </ul>
         </div>

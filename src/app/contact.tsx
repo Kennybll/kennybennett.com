@@ -39,7 +39,7 @@ export const Contact = () => (
         production, and leading development teams. Seeking a challenging role to
         leverage my skills to create innovative and impactful products.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:justify-between gap-2">
         {links.map((link) => {
           if (!link.url) {
             return (
@@ -66,13 +66,6 @@ export const Contact = () => (
           );
         })}
       </div>
-    </div>
-    <div className="flex-[2] place-content-end flex h-fit">
-      <img
-        src="/photo.jpeg"
-        alt="Kenny Bennett"
-        className="rounded-full w-32"
-      />
     </div>
   </div>
 );

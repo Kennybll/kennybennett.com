@@ -1,51 +1,33 @@
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 
-const skills = [
-  "React",
-  "React Native",
-  "React Query",
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "Node.js",
-  "Redux",
-  "HTML",
-  "CSS",
-  "Next Auth",
-  "Tailwindcss",
-  "Expo",
-  "Jest",
-  "Cypress",
-
-  "MySQL",
-  "PostgreSQL",
-  "Redis",
-  "Clickhouse",
-  "Prisma",
-
-  "Go",
-  "Golang",
-  "Express",
-  "WebSockets",
-
-  "AWS",
-  "Cloudflare",
-  "Docker",
-  "Kubernetes",
-  "Terraform",
-  "Square",
-  "Sentry",
-  "Doppler",
-  "Gitlab",
-  "Github",
-  "AWS S3",
-  "AWS Lambda",
-  "AWS Cognito",
-  "Blockchain",
-  "Xcode",
-  "TestFlight",
-];
+const newSkills: {
+  [key: string]: Array<string>;
+} = {
+  Languages: ["TypeScript", "JavaScript", "Node.js", "Go", "HTML", "CSS"],
+  Libaries: [
+    "React",
+    "React Native",
+    "React Query",
+    "Next.js",
+    "Redux",
+    "Tailwind",
+    "Express",
+    "Prisma",
+    "Expo",
+    "Jest",
+    "Cypress",
+  ],
+  Databases: ["MySQL", "PostgreSQL", "Redis", "Clickhouse"],
+  Infrastructure: [
+    "AWS",
+    "Cloudflare",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "Sentry",
+  ],
+} as const;
 
 const personalSkills = [
   "Leadership",
@@ -62,13 +44,20 @@ export const TechnicalSkills = () => (
   <div>
     <h1 className="font-bold text-2xl">Technical Skills</h1>
     <Separator className="h-[3px] bg-slate-700 mb-4" />
-    <ul className="flex flex-wrap gap-2">
-      {skills.map((skill, index) => (
-        <Badge variant={"outline"} key={index}>
-          {skill}
-        </Badge>
+    <div className="flex flex-col gap-4">
+      {Object.keys(newSkills).map((category) => (
+        <div className="font-bold" key={category}>
+          <h2>{category}</h2>
+          <div className="flex flex-wrap gap-2">
+            {newSkills[category].map((skill, index) => (
+              <Badge variant={"outline"} key={index}>
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
   </div>
 );
 
