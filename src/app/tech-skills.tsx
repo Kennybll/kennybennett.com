@@ -4,12 +4,13 @@ import { Badge } from "@/components/ui/badge";
 const newSkills: {
   [key: string]: Array<string>;
 } = {
-  Languages: ["TypeScript", "JavaScript", "Node.js", "Go", "HTML", "CSS"],
+  Languages: ["TypeScript", "JavaScript", "Node.js", "C#", "HTML", "CSS"],
   Libaries: [
     "React",
     "React Native",
     "React Query",
     "Next.js",
+    "Angular",
     "Redux",
     "Tailwind",
     "Express",

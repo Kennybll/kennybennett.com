@@ -13,10 +13,32 @@ type Experience = {
 
 const experiences: Array<Experience> = [
   {
+    title: "Senior Front End Developer",
+    company: "Addison Group",
+    startDate: "12/2024",
+    endDate: "07/2025",
+    location: "Grand Rapids, MI (Remote)",
+    description: [
+      "Led development of image management tools for the USDA PLANTS admin system, enabling creation, editing, reassociation, metadata tagging, and bulk uploading to address a backlog of thousands of plant images",
+      "Increased unit test coverage from ~40% to nearly 90% on a key internal project, significantly improving code reliability and enabling safer deployments",
+      "Conducted accessibility enhancements and testing to meet Section 508 compliance, ensuring inclusive design for public-facing and internal applications",
+      "Delivered full-stack solutions using Angular (RxJS, SCSS) and ASP.NET on the .NET Framework, supporting both public (plants.usda.gov) and internal platforms",
+    ],
+    technologies: [
+      "TypeScript",
+      "Angular",
+      "C#",
+      "ASP.NET",
+      ".NET Framework",
+      "SCSS",
+      "RxJS",
+    ],
+  },
+  {
     title: "Senior Full Stack Developer",
     company: "F & B Wholesale",
     startDate: "05/2022",
-    endDate: "Present",
+    endDate: "03/2025",
     location: "Bronson, MI (Remote)",
     description: [
       "Developed and deployed a real time auction website with millions in sales, 10k+ users, and over 1250 daily active users",
